@@ -10,7 +10,15 @@
 
 <body>
     <ul>
-
+    <?php
+        require_once('func.php');
+        $fibonacci = (getFibonacci(10));
+        for ($i = 0; $i < count($fibonacci); $i++) {
+        ?>
+            <li><?= $fibonacci[$i] ?></li>
+        <?php
+        }
+        ?>
     </ul>
 </body>
 
