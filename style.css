@@ -1,7 +1,0 @@
-li:nth-child(even) {
-    color: blue;
-}
-
-li:nth-child(odd) {
-    color: red;
-}
