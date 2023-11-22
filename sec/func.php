@@ -1,7 +1,7 @@
 <?php
 
 function factors($n) {
-
+    $n = abs($n);
     $arr = [];
     for ($i = 2; $i <= $n / $i; $i++) {
         while($n % $i == 0) {
@@ -18,6 +18,8 @@ function factors($n) {
 
 function gcd($a, $b)
 {
+    $a = abs($a);
+    $b = abs($b);
     while ($a != $b)
         if ($a > $b)
             $a -= $b;
@@ -28,10 +30,14 @@ function gcd($a, $b)
 
 function lcm($a, $b)
 {
-    return (abs($a * $b) / gcd($a, $b));
+    $a = abs($a);
+    $b = abs($b);
+    return (($a * $b) / gcd($a, $b));
 }
 
 function multipNum($a, $b)
 {
+    $a = abs($a);
+    $b = abs($b);
     return (int)$a * (int)$b;
 }
